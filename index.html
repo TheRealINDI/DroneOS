@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>DroneOS</title>
-    <!-- REMOVE FOR BLACK TEXT -->
+    <!-- REMOVE STYLE FOR BLACK TEXT -->
     <style>
         body {
             color: rgb(221, 221, 221);
@@ -16,23 +16,27 @@
 
 <body style="background-image: url(https://images.indifpv.org/Droneos/wallpapers/Wallpaper-1); background-size: cover; height: 100vh;">
 
-<!-- THIS WAS MADE WITH AI PURELY FOR THE TIME AND DATE, I DONT KNOW JAVASCRIPT SO PLEASE DOTN BLAME ME FOR DOING IT. I KNOW IT WAS IN THE INSTRUCTIONS, BUT NOT IN 24H FORMAT. I DID LEARN ABOUT THE CODE AND HOW IT WORKS! -->
+
     <div style="position: absolute; width: 100%; display: flex; background-color: rgba(7, 71, 167, 0.50); color: #fff; justify-content: space-between; padding: 8px 20px; box-sizing: border-box; top: 0; left: 0;">
         <span><img src="https://images.indifpv.org/Droneos/Droneos-logo-white.png" alt="DroneOS" style="width: 128px; height: 64px";></span>
         <span id="time">--:--</span>
         <span id="date">-- -- ----</span>
     </div>
-<!-- UNTIL HERE ND THE SCRIPT BELOW -->
+
 
     <div style="position: absolute; top: 50%; left: 50%;
         transform: translate(-50%, -50%); padding: 16px; 
         border: dashed 2px rgb(87, 180, 149); 
         width: fit-content; border-radius: 16px; 
-        background-color: dimgray;">
+        background-color: rgba(0, 0, 0, 0.116); backdrop-filter: blur(20px);" id="welcome" styles="(styles)">
+
+        <p id="welcomeheader" style="width: 100%; display: flex; align-items: start; cursor: move; justify-content: start; margin-top: 8px;"> 
+	Welcome
+	</p>
 
         <img style="border-radius: 64px; object-fit: cover; width: 64px; height: 64px" 
-             src="https://images.indifpv.org/Droneos/Drone.png">
-        <h1>DroneOS</h1>
+         src="https://images.indifpv.org/Droneos/Drone.png">
+        <h1>Introduction</h1>
         <p>Hi! Welcome to DroneOS!</p>
         <p>I'm Indi, The Creator of DroneOS</p>
         <p>If you didnt realise, i like drones, FPV drones.</p>
@@ -56,12 +60,12 @@
             </a>
         </div>
     </div>
-            <!-- THIS SCRPT WAS MADE WITH AI, I DONT KNOW JAVASCRIPT AND THIS IS PURELY FOR THE TIME AND DATE! -->
+          
     <script>
         function updateTimeAndDate() {
             const now = new Date();
 
-            // Time (24-H)
+           
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const timeString = hours + ':' + minutes;
@@ -79,5 +83,7 @@
         setInterval(updateTimeAndDate, 1000);
     </script>
 
+
+<script src="script.js"></script>
 </body>
 </html>
